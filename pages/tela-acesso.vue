@@ -18,11 +18,11 @@
 
 <script>
 export default {
- name: 'tela-acessoPage'
+ name: 'TelaAcessoPage'
 }
 </script>
 
-<style>
+<style  scoped>
 html, body{
  height: 100%;
  width: 100;
@@ -42,8 +42,15 @@ html, body{
   padding: 10px;
   margin-top: 20px;
 }
-
+h1{
+  font-size: 50px;
+}
 p{
-  font-size: 20px;
+  font-size: 18px;
+  text-align: left !important;
+  margin-top: 3px;
+}
+.input{
+  font-size:20px;
 }
 </style>
