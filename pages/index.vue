@@ -23,7 +23,7 @@
 
 <script>
 export default {
-    name: 'TelaCadastroPage',
+    name: 'TelaInicialPage',
     methods:{
         irParaIndex(){
             this.$router.push("/");
