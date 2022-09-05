@@ -12,7 +12,7 @@
   
   <script>
   export default {
-    name: 'IndexPage',
+    name: 'IndexPage'
   }
   </script>
   <style>
@@ -47,4 +47,5 @@
     margin: 0 auto;
     margin-top: 75px;
   }
+  
   </style>
