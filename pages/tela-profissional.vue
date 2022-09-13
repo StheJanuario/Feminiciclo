@@ -1,17 +1,17 @@
 <template>
   <b-container>
-   <h1>Vítima</h1>
+   <h1>Profissional</h1>
    <p>Informações necessárias</p>
   
-   <label>Idade</label>
-   <b-form-input placeholder=" Ex 20 anos"></b-form-input>
-   <label>RG</label>
-   <b-form-input placeholder="Ex: XX.XXX.XXX.X"></b-form-input>
-   <label>Boletim de Ocorrência</label>
-   <b-form-input placeholder="Foi feito um boletim de Ocorrência ? (Sim) ou (Não)"></b-form-input>
-   <label>Corpo de Delito</label>
-   <b-form-input placeholder="Ouve exame de corpo de delito ? (Sim) ou (Não)"></b-form-input>
-  <b-button class="botao" @click="telaEntrar()">PRÓXIMO</b-button>
+   <label>CPF:</label>
+   <b-form-input placeholder="Ex: XXX.XXX.XXX-XX."></b-form-input>
+   <label>Área de Formação:</label>
+   <b-form-input placeholder="Digite a área em que você trabalha."></b-form-input>
+   <label>Horário de Atendimento:</label>
+   <b-form-input placeholder="Digite seu horário de Atendimento."></b-form-input>
+   <label>Forma de Atendimento:</label>
+   <b-form-input placeholder="Qual a forma de atendimento? (on-line) ou (presencial)."></b-form-input>
+  <b-button class="botao" @click="telaEntrar()">REGISTRAR</b-button>
   </b-container>
   
 </template>

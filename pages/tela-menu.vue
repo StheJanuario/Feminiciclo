@@ -1,4 +1,6 @@
 <template>
+<div>
+  <div>
    <header id="header">
     <img src="https://cdn-icons-png.flaticon.com/128/149/149145.png" id="logo" @click="telaOpcoes()">
     <nav id="nav">
@@ -13,8 +15,15 @@
          <li><a href="/">Configurações</a></li>
        </ul>
      </nav>
-  
    </header>
+  </div>
+  <div>
+    <img src="logo.png">
+    <button>exemplo</button>
+  </div>
+
+  </div>
+
    
 </template>
 

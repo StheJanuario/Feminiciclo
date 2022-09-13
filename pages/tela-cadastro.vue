@@ -2,11 +2,15 @@
     <div>
       <img src="logo.png" class="logo" />
       <p>Gostaria de acessar como:</p>
-      <NuxtLink to="/tela-acesso"
+      <NuxtLink to="/tela-vitima"
         ><b-button class="botao">VÍTIMA</b-button></NuxtLink
       >
-      <b-button class="botao">PROFISSIONAL</b-button>
-      <b-button class="botao">INSTITUIÇÃO</b-button>
+      <NuxtLink to="/tela-profissional"
+        ><b-button class="botao">PROFISSIONAL</b-button></NuxtLink
+      >
+      <NuxtLink to="/tela-instituicao"
+        ><b-button class="botao">INSTITUIÇÃO</b-button></NuxtLink
+      >
     </div>
   </template>
   
@@ -16,8 +20,7 @@
   }
   </script>
   <style>
-  html,
-  body {
+  html,body {
     height: 100%;
     width: 100;
     background-color: #f8d4d4;
@@ -47,5 +50,4 @@
     margin: 0 auto;
     margin-top: 75px;
   }
-  
   </style>
