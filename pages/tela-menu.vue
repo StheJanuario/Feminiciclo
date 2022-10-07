@@ -1,48 +1,50 @@
 <template>
-<div>
   <div>
-   <header id="header">
-    <img src="https://cdn-icons-png.flaticon.com/128/149/149145.png" id="logo" @click="telaOpcoes()">
-    <nav id="nav">
-       <button id="botao-mobile"></button>
+    <div>
+      <header id="header">
+        <img src="https://cdn-icons-png.flaticon.com/128/149/149145.png" id="logo" @click="telaOpcoes()">
+        <nav id="nav">
+          <button id="botao-mobile"></button>
           <span id="hamburguer"></span>
-       <ul id="menu">
-         <li><a href="/">Perfil</a></li>
-         <li><a href="/">Redes Mapeadas</a></li>
-         <li><a href="/">Redes online</a></li>
-         <li><a href="/">Profissionais</a></li>
-         <li><a href="/">Mais informações</a></li>
-         <li><a href="/">Configurações</a></li>
-       </ul>
-     </nav>
-   </header>
-  </div>
-  <div>
-    <img src="logo.png">
-    <button>exemplo</button>
-  </div>
+          <ul id="menu">
+            <li><a href="/">Perfil</a></li>
+            <li><a href="/">Redes Mapeadas</a></li>
+            <li><a href="/">Redes online</a></li>
+            <li><a href="/">Profissionais</a></li>
+            <li><a href="/">Mais informações</a></li>
+            <li><a href="/">Configurações</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <div>
+      <img id ="conteudo-central" src="logo.png"><br>
+      <button>exemplo</button>
+    </div>
 
   </div>
 
-   
+
 </template>
 
 
-<script> 
+<script>
 export default {
-    name: 'TelaMenuPage',
-    methods:{
-      telaOpcoes(){
-            this.$router.push("opcoes");
-      }
-        }
+  name: 'TelaMenuPage',
+  methods: {
+    telaOpcoes() {
+      this.$router.push("opcoes");
     }
+  }
+}
 
 </script>
 
 
 <style>
-body, ul {
+body,
+ul {
   margin: 0px;
   padding: 0px;
 }
@@ -53,17 +55,17 @@ a {
   font-family: sans-serif;
 }
 
-a:hover{
+a:hover {
   background: #f48b9b;
 }
 
-#logo{
+#logo {
   padding-top: 5px;
   width: 35px;
   height: 35px;
 }
 
-#header{
+#header {
   box-sizing: border-box;
   height: 70px;
   padding: 1rem;
@@ -73,28 +75,30 @@ a:hover{
   background-color: #f1a4ae;
 }
 
-#menu{
+#menu {
   display: flex;
   list-style: none;
   gap: 0.5rem;
 }
 
-#menu a{
+#menu a {
   display: block;
   padding: .5rem;
 }
 
-#botao-mobile{
+#botao-mobile {
   display: none;
 }
-.logo-principal{
+
+.logo-principal {
   display: block;
   margin: 0 auto;
   width: 300px;
   height: 300px;
   margin-top: 150px;
 }
-.botao-principal{
+
+.botao-principal {
   width: 70px;
   height: 70px;
   background-color: #fd8ca0;
@@ -107,11 +111,12 @@ a:hover{
   margin-top: 50px;
 }
 
-@media (max-width: 600px){
+@media (max-width: 600px) {
   #botao-mobile {
     display: block;
   }
-  #menu{
+
+  #menu {
     display: block;
     position: absolute;
     width: 70%;
@@ -123,34 +128,40 @@ a:hover{
     overflow: hidden;
     transition: 0.6s;
     z-index: 1000;
-    
+
   }
+
   #nav.active #menu {
     height: calc(100vh - 70px);
     visibility: visible;
     overflow: auto;
   }
+
   #menu a {
     padding: 1.5rem 0;
     margin: 0 1rem;
     border-bottom: 3px solid #f2788b;
   }
-  #botao-mobile{
+
+  #botao-mobile {
     display: flex;
-    padding: .5rem  1rem;
+    padding: .5rem 1rem;
     font-size: 1rem;
     border: none;
     background: none;
     cursor: pointer;
     gap: 0.5rem;
   }
-  #hamburguer{
+
+  #hamburguer {
     display: block;
     width: 20px;
     border-top: 2px solid;
     color: white;
   }
-  #hamburguer::after, #hamburguer::before{
+
+  #hamburguer::after,
+  #hamburguer::before {
     content: '';
     width: 20px;
     height: 2px;
@@ -160,13 +171,16 @@ a:hover{
     transition: 0.3s;
     position: relative;
   }
-  #nav.active #hamburguer{
+
+  #nav.active #hamburguer {
     border-top-color: transparent;
   }
-  #nav.active #hamburguer::before{
+
+  #nav.active #hamburguer::before {
     transform: rotate(135deg);
   }
-   #nav.active #hamburguer::after{
+
+  #nav.active #hamburguer::after {
     transform: rotate(-135deg);
     top: -7px;
   }

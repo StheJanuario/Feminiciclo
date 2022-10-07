@@ -14,8 +14,8 @@
         ></textarea
         ><br />
         <div id="botoes">
-          <input class="botao" type="submit" value="Excluir" />
-          <input class="botao" type="submit" value="Enviar" />
+          <button v-on:click="excluirFeedback" class="botao" type="submit" value="Excluir">Excluir</button>
+          <button v-on:click="enviarFeedback" class="botao" type="submit" value="Enviar">Enviar</button>
         </div>
       </fieldset>
     </form>
@@ -23,6 +23,30 @@
 </template>
 
 <script>
+export default {
+  data(){
+    return {
+      form: {
+        descricao: "",
+      },
+      show: true,      
+    }
+  },
+  methods:{
+    enviarFeedback({ $axios }) {
+      this.$axios.post("/tela-feedbacks", {
+        descricao: this.form.descricao,
+      })
+    },
+
+  excluirFeedback({$axios}){
+    this.$axios.delete('/feedbacks/delete/{id}');
+    const result = document.getElementById("deletar");
+    result.innerHTML = "feedback excluído com sucesso";
+  }
+      
+    }
+  }
 </script>
 <style>
 body{
@@ -47,20 +71,16 @@ body{
 }
 #botoes{
   display: flex;
-  align-items: center;
 }
 .botao {
-  width: 80%;
-  height: 60%;
+  width: 120px;
+  height: 35px;
   background-color: #fd8ca0;
   border: 1px #f88ea0;
   border-radius: 3px;
   margin: 0 20px 0 20px;
   color: white;
-  /* flex-direction: row !important; */
-  padding: 10px;
   margin-top: 20px !important;
-  display: inline-block;
 }
 
 fieldset {
