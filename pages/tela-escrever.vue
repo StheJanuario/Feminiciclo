@@ -11,13 +11,14 @@
           class="msg"
           cols="50"
           rows="10"
+          v-model="form.descricao"
         ></textarea
         ><br />
         <div id="botoes">
-          <button v-on:click="excluirFeedback" class="botao" type="submit" value="Excluir">Excluir</button>
-          <button v-on:click="enviarFeedback" class="botao" type="submit" value="Enviar">Enviar</button>
+          <button v-on:click.prevent = "enviarFeedback" class="botao" type="submit" value="Enviar">Enviar</button>
         </div>
       </fieldset>
+      <NuxtLink to="/tela-feedbacks"></NuxtLink>
     </form>
   </div>
 </template>
@@ -33,10 +34,21 @@ export default {
     }
   },
   methods:{
-    enviarFeedback({ $axios }) {
-      this.$axios.post("/tela-feedbacks", {
+    async enviarFeedback({ $axios }) {
+     const response = await this.$axios.post("/feedback", {
         descricao: this.form.descricao,
-      })
+      }
+     )
+     if(response.status == 200){
+      alert(
+        "Feedback enviado com sucesso"
+      )
+      this.$router.push("/tela-feedbacks");
+     }else{
+      alert(
+        `Erro: ${response.status}`
+      )
+     }
     },
 
   excluirFeedback({$axios}){

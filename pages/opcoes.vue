@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div id="conteudo">
     <div>
       <p>feedbacks publicos</p>
       <img src="feedbacksPublicoIcone.png" @click="irParaFeedbacks()" />
@@ -38,4 +38,9 @@ div{
   padding-left: 130px;
   padding-right: 130px;
 }
+.conteudo{
+  display:flex;
+  flex: center;
+}
+
 </style>
