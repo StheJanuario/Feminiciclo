@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <p>Aqui ficarão armazenados os feedbacks publicos</p>
+    <div id="principal"><br>
+        <p>FEEDBACKS:</p>
         <div v-bind:key ="feedback.id" v-for="feedback in feedbacks">
           {{feedbacks.id}}- {{feedback.descricao}}
         <button v-on:click.prevent = "excluirFeedback(feedback.id)" class="botao" type="submit" value="Enviar">Excluir</button>
@@ -29,9 +29,17 @@
   }
 </script>
 <style>
-  div{
-    background-color: pink;
-    width: 50%;
-    height: 50%;
-  }
+#principal{
+  box-sizing: border-box;
+  background-color: pink;
+  height: 100%;
+  width: 35%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 18%;
+  border-radius: 15px;
+}
+.botao{
+  margin-left: 88%;
+}
 </style>

@@ -17,7 +17,7 @@
       </header>
     </div>
 
-    <div>
+    <div id="componentes">
       <img src="logo.png" class="logo-principal"><br>
       <img src="IconeSocorro.png" class="botao-socorro" id="resposta" v-on:click="alertarSocorro()">
     </div>
@@ -154,6 +154,7 @@ a:hover {
   color: rgb(55, 53, 53);
   height: 15px;;
   font-size: 16px;
+  margin-top: 30px;
 }
 .cabecalho {
   margin-top: 100px;
@@ -166,6 +167,9 @@ a:hover {
 .informacoes-rodape{
   display: flex;
   flex-direction: collumn;
+}
+#componentes{
+  height: 90%;
 }
 
 @media (max-width: 600px) {
