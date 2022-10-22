@@ -21,7 +21,7 @@ export default {
  name: 'TelaAcessoPage',
  methods:{
   telaEntrar(){
-    this.$router.push("tela-entrar")
+    this.$router.push("cadastro")
   }
  }
 }

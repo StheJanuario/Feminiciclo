@@ -1,81 +1,134 @@
 <template>
-  <div>
-    <img src="perfil.png" class="perfil">
-    <h1>Seja Bem-Vinda</h1>
-    <b-container>
-      <label>Nome</label>
-      <b-form-input placeholder=" Amanda Tavares da Silva"></b-form-input>
-      <label>Idade</label>
-      <b-form-input placeholder="31 anos"></b-form-input>
-      <label>CPF</label>
-      <b-form-input placeholder="000.111.222/33"></b-form-input>
-      <label>Endereço</label>
-      <b-form-input placeholder="Rua das Flores, 456."></b-form-input>
-      <div class="btn_form">
-        <!-- <NuxtLink to="/"> <b-button class="botao">Alterar dados</b-button></NuxtLink> -->
-        <b-button class="botao" @click="irParaIndex()">Alterar dados</b-button>
-         <!-- <NuxtLink to="/"> <b-button class="botao">Prosseguir</b-button></NuxtLink> -->
-        <b-button class="botao" @click="telaCadastro()">Prosseguir</b-button>
-      </div>
-    </b-container>
-  </div>
+
+    <div id="login">
+        <form class="card">
+            <div class="card-header">
+                <h2>Login</h2>
+            </div>
+            <div class="card-content">
+                <div class="card-content-area">
+                    <label for="email" >Email</label>
+                    <input type="text" placeholder="ex: usuária@gmail.com" id="email" autocomplete="off" >
+                </div>
+                <div class="card-content-area">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" autocomplete="off" placeholder="ex: 1234">
+
+                    <p>
+                        <input type="checkbox" name="manterlogado" id="manterlogado" value="" />
+                        <label for="manterlogado">Manter-me logado</label>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <NuxtLink to="/tela-menu"><input type="submit" value="Login" class="submit"></NuxtLink>
+            </div>
+            <div id="cadastro">
+                <p>Ainda não tem uma conta?</p>
+                <NuxtLink to="/tela-cadastros"><button>Cadastre-se</button></NuxtLink>
+            </div>
+            
+        </form>
+    </div>
 </template>
 
 <script>
-export default {
-    name: 'TelaInicialPage',
-    methods:{
-        irParaIndex(){
-            this.$router.push("/");
-            
-        },  
-        telaCadastro(){
-            this.$router.push("tela-cadastro");
-            
-        }
-
-    }
-}
 </script>
 
 <style>
-html,
 body {
-  height: 100%;
-  width: 100;
-  background-color: #f8d4d4;
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(to right, #f7a1a1, #efc2c2, #fbf3f3);
 }
-
-.botao {
-  max-width: 15%;
-  max-height: 50px;
-  background-color: #fd8ca0;
-  border: 1px #f88ea0;
-  border-radius: 3px;
-  margin: 0 20px 0 20px;
-  color: white;
-  /* flex-direction: row !important; */
-  padding: 10px;
-  margin-top: 20px !important;
-  display: inline-block;
-}
-
-.btn_form{
+#login {
     display: flex;
+    align-items: center;
     justify-content: center;
-}
+    height: 100vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
-h1{
-   text-align: center;
-   font-size: 25px;
-   margin-top:15px;
 }
+.card {
+    background-color: rgba(19, 19, 19, 0.3);
+    padding: 40px;
+    width: 400px;
 
-.perfil{
+}
+.card-header {
+    padding-bottom: 50px;
+    opacity: 0.8;
+    color: #fff;
+    border-radius: 15px;
+
+}
+.card-header::after {
+    content: "";
+    width: 70px;
+    height: 1px;
     display: block;
-  margin: 0 auto;
-  width: 100px;
-  height: 100px;
-}
+    margin-top: -30px;
+    margin-left: -5px;
 
+}
+.card-content label {
+    color: #fff;
+    font-size: 12px;
+    opacity: 0.7;
+
+}
+.card-content-area {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+.card-content-area input {
+    margin-top: 10px;
+    padding: 0 5px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #e1e1e1;
+    outline: none;
+    color: #fff;
+
+}
+.card-footer {
+    display: flex;
+    flex-direction: column;
+}
+.card-footer .submit {
+    width: 100%;
+    height: 40px;
+    background-color: #fafafa;
+    font-size: 16px;
+    border: none;
+    color: #000000;
+    margin: 10px 0;
+}
+.card-footer a {
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.8;
+    color: #fff;
+    text-decoration: none;
+}
+#cadastro{
+    margin-top: 3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#cadastro p {
+    color: #fff; 
+    font-size: 13px;
+}
+#cadastro button{
+    background-color: #fff;
+    color: rgba(41, 38, 38, 0.808); 
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    font-family:Arial, Helvetica, sans-serif;
+}
 </style>

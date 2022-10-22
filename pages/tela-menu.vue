@@ -22,36 +22,6 @@
       <img src="IconeSocorro.png" class="botao-socorro" id="resposta" v-on:click="alertarSocorro()">
     </div>
     
-    <footer class="rodape">
-      <section class="cabecalho">
-
-      <div class=informações-rodapé>
-        <h3>Inicio</h3>
-        <p>Home</p>
-        <p>Chat</p>
-        <p>Telefone</p>
-      </div>
-
-      <div class=informações-rodapé>
-        <h3>Sobre nós</h3>
-        <p>Informações do Site</p>
-        <p>Contato</p>
-        <p>Mais</p>
-      </div>
-
-      <div class=informações-rodapé>
-        <h3>Suporte</h3>
-        <p>Ligue 190 - PM</p>
-        <p>Ligue 197 - Disque Denúncia </p>
-        <p>Ligue 180 - Central de Atendimento a mulher</p>
-      </div>
-
-      <div class=informações-rodapé>
-      <img src="Icones-rodape.jpeg">
-      </div>
-
-    </section>
-    </footer>
   </div>
 </template>
 
@@ -147,29 +117,6 @@ a:hover {
   display: block;
   padding: 10px;
   margin-top: 50px;
-}
-.rodape{
-  background-color: white;
-  font-family: 'Sarala', sans-serif;
-  color: rgb(55, 53, 53);
-  height: 15px;;
-  font-size: 16px;
-  margin-top: 30px;
-}
-.cabecalho {
-  margin-top: 100px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  padding: 18px;
-}
-.informacoes-rodape{
-  display: flex;
-  flex-direction: collumn;
-}
-#componentes{
-  height: 90%;
 }
 
 @media (max-width: 600px) {

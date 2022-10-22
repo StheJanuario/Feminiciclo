@@ -1,7 +1,7 @@
 <template>
     <div>
       <img src="logo.png" class="logo" />
-      <p>Gostaria de acessar como:</p>
+      <p>Gostaria de se cadastrar como:</p>
       <NuxtLink to="/tela-vitima"
         ><b-button class="botao">VÍTIMA</b-button></NuxtLink
       >
